@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    username: root
+    password: asdfasdf
+    url: jdbc:mysql://68.79.51.139:1234/ml
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    initialization-mode: always
+    type: com.alibaba.druid.pool.DruidDataSource
