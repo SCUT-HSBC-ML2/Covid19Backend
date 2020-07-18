@@ -16,7 +16,7 @@ public class EchartController {
     CovidMapper covidMapper;
 
     @GetMapping("/echart/totalConfirmed")
-    public List<Echart> getAll(){
+    public List<Echart> getTotalConfirmed(){
         List<Covid> all = covidMapper.getAll();
         List<Echart> res = new ArrayList<Echart>();
         for (Covid c : all){
@@ -27,4 +27,31 @@ public class EchartController {
         }
         return res;
     }
+
+    @GetMapping("/echart/newConfirmed")
+    public List<Echart> getNewConfirmed(){
+        List<Covid> all = covidMapper.getAll();
+        List<Echart> res = new ArrayList<Echart>();
+        for (Covid c : all){
+            Echart e = new Echart();
+            e.setName(c.getCountry());
+            e.setValue(c.getNewConfirmed());
+            res.add(e);
+        }
+        return res;
+    }
+
+    @GetMapping("/echart/totalDeaths")
+    public List<Echart> getTotalDeaths(){
+        List<Covid> all = covidMapper.getAll();
+        List<Echart> res = new ArrayList<Echart>();
+        for (Covid c : all){
+            Echart e = new Echart();
+            e.setName(c.getCountry());
+            e.setValue(c.getTotalDeaths());
+            res.add(e);
+        }
+        return res;
+    }
+
 }
