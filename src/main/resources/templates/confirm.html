@@ -8,7 +8,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>Dashboard Template for Bootstrap</title>
+		<title>Covid-19</title>
 		<!-- Bootstrap core CSS -->
 		<link href="../static/asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.min.css}" rel="stylesheet">
 
@@ -55,7 +55,67 @@
 
 		<div class="container-fluid">
 			<div class="row">
+				<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+					<div class="sidebar-sticky">
+						<ul class="nav flex-column">
+							<li class="nav-item">
+								<a class="nav-link active" href="">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home">
+										<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+										<polyline points="9 22 9 12 15 12 15 22"></polyline>
+									</svg>
+									首页 <span class="sr-only">(current)</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">
+										<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
+										<polyline points="13 2 13 9 20 9"></polyline>
+									</svg>
+									新增病例
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+										<circle cx="9" cy="21" r="1"></circle>
+										<circle cx="20" cy="21" r="1"></circle>
+										<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+									</svg>
+									死亡病例
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users">
+										<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+										<circle cx="9" cy="7" r="4"></circle>
+										<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+										<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+									</svg>
+									治愈
+								</a>
+							</li>
+							<li class="nav-item">
+								<div class="btn-group">
+									<button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										地 区
+									</button>
+									<div class="dropdown-menu dropdown-menu-right">
+										<button class="dropdown-item" type="button">China</button>
+										<button class="dropdown-item" type="button">Japan</button>
+										<button class="dropdown-item" type="button">Ameica</button>
+									</div>
+								</div>
+							</li>
+						</ul>
 
+
+
+					</div>
+
+				</nav>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 					<h2>Covid过去一周和未来14天的累计确诊预测数据（数据截止到6.30）</h2>
@@ -75,86 +135,7 @@
 							</tbody>
 						</table>
 					</div>
-					<div>
-<!--						<canvas id="cavsElem">-->
-<!--							你的浏览器不支持canvas，请升级浏览器.浏览器不支持，显示此行文本-->
-<!--						</canvas>-->
-<!--						<script>-->
-<!--							(function () {-->
-<!--								var canvas = document.getElementById('cavsElem'); //获得画布-->
-<!--								var ctx = canvas.getContext('2d'); //注意：2d小写， 3d：webgl-->
-<!--								canvas.width = 1800; //设置标签的属性宽高-->
-<!--								canvas.height = 900;-->
-<!--								// canvas.style.border = '1px solid #000';-->
 
-<!--								var data =[-->
-<!--									{-->
-<!--										"value":.2,-->
-<!--										"color":"red",-->
-<!--										"title":"零钱:￥200"-->
-
-<!--									}, {-->
-<!--										"value":.3,-->
-<!--										"color":"green",-->
-<!--										"title":"工行:￥300"-->
-
-<!--									}, {-->
-<!--										"value":.4,-->
-<!--										"color":"blue",-->
-<!--										"title":"建行:￥400"-->
-
-<!--									}, {-->
-<!--										"value":.1,-->
-<!--										"color":"#ccc",-->
-<!--										"title":"农行:￥100"-->
-
-<!--									}-->
-<!--								];-->
-<!--								var tempAngle = -0.5*Math.PI;-->
-<!--								var x0=700,y0=400;-->
-<!--								var radius=200;-->
-<!--								for( var i=0;i<data.length;i++){-->
-<!--									ctx.beginPath();-->
-<!--									ctx.moveTo(x0,y0);-->
-<!--									ctx.fillStyle=data[i].color;-->
-<!--									var StartAngle = tempAngle;-->
-<!--									var EndAngle = tempAngle+2*Math.PI*data[i].value;-->
-<!--									ctx.arc(x0,y0,radius,StartAngle,EndAngle);-->
-<!--									ctx.fill();-->
-<!--									//绘制百分比文字-->
-<!--									ctx.beginPath();-->
-<!--									var txt = data[i].value*100+'%';-->
-<!--									var x, y ,x1 ,y1;-->
-<!--									var txtAngle = tempAngle+Math.PI*data[i].value-->
-<!--									x=x0+Math.cos(txtAngle)*(radius-90);-->
-<!--									y=y0+Math.sin(txtAngle)*(radius-90);-->
-<!--									ctx.textAlign='center'-->
-<!--									// if(txtAngle>1/2*Math.PI&&tempAngle<3/2*Math.PI){-->
-<!--									//     ctx.textAlign='end';-->
-<!--									// }-->
-<!--									ctx.fillStyle = 'black'; //设置填充颜色为紫色-->
-<!--									ctx.font = '20px "微软雅黑"'; //设置字体-->
-<!--									ctx.fillText(txt,x,y)-->
-
-
-<!--									//绘制type-->
-<!--									ctx.beginPath();-->
-<!--									x1=x0+Math.cos(txtAngle)*(radius+20);-->
-<!--									y1=y0+Math.sin(txtAngle)*(radius+20);-->
-<!--									ctx.textAlign='start';-->
-<!--									if(txtAngle>1/2*Math.PI&&tempAngle<3/2*Math.PI){-->
-<!--										ctx.textAlign='end';-->
-<!--									}-->
-<!--									ctx.fillStyle = 'black'; //设置填充颜色为紫色-->
-<!--									ctx.font = '20px "微软雅黑"'; //设置字体-->
-<!--									ctx.fillText(data[i].title,x1,y1)-->
-
-<!--									tempAngle = EndAngle;-->
-<!--								}-->
-<!--								ctx.stroke(); //描边路径-->
-<!--							}());-->
-<!--						</script>-->
-					</div>
 
 					<div id="chartContainer" style="height: 470px; max-width: 1220px; margin: 0px auto;"></div>
 
@@ -199,10 +180,12 @@
 
 			}
 		</script>
+		<script src="https://cdn.bootcss.com/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/jquery.min.js}"></script>
 		<script th:src="@{/asserts/js/canvasjs.min.js}" ></script>
 		<script type="text/javascript" src="asserts/js/jquery-3.2.1.slim.min.js" th:src="@{/webjars/jquery/3.3.1/jquery.js}"></script>
 		<script type="text/javascript" src="asserts/js/popper.min.js" th:src="@{/webjars/popper.js/1.11.1/dist/popper.js}"></script>
-		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.js}"></script>
+		<script type="text/javascript" src="asserts/js/bootstrap.min.js" th:src="@{/webjars/bootstrap/4.0.0/js/bootstrap.min.js}"></script>
 
 		<!-- Icons -->
 		<script type="text/javascript" src="asserts/js/feather.min.js" th:src="@{/asserts/js/feather.min.js}"></script>
