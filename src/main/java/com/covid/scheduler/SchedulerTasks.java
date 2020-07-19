@@ -49,7 +49,7 @@ public class SchedulerTasks {
         return json.toString();
     }
 
-    @Scheduled(fixedRate = 500000)
+    @Scheduled(fixedRate = 3600000)
     public boolean Task(){
         jdbcTemplate.execute("DROP TABLE IF EXISTS covid");
         jdbcTemplate.execute("CREATE TABLE covid(" +
@@ -60,7 +60,7 @@ public class SchedulerTasks {
         ObjectMapper mapper = new ObjectMapper();//实例一个ObjectMapper
         try {
             Map<String,Object> map = mapper.readValue(
-                    new File("C:\\Users\\92927\\IdeaProjects\\predict\\src\\main\\resources\\test.json"),
+                    loadJson("https://api.covid19api.com/summary"),
                     new TypeReference<Map<String, Object>>(){});
             List<Covid> covids = (List<Covid>) map.get("Countries");
             Covid covid = new Covid();//实例化实体对象

@@ -10,3 +10,5 @@ spring:
     prefix: classpath:/templates/
     suffix: .html
     encoding: UTF-8
+server:
+  port: 8888

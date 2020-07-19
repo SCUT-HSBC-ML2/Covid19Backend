@@ -38,10 +38,10 @@ class CovidApplicationTests {
 //        covidMapper.insertCovid(covid);
 //    }
 //
-    @Test
-    void Test3(){
-        schedulerTasks.Task();
-    }
+//    @Test
+//    void Test3(){
+//        schedulerTasks.Task();
+//    }
 //
 //    @Test
 //    void Test4(){
