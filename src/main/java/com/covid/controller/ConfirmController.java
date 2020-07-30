@@ -16,7 +16,7 @@ public class ConfirmController {
     @Resource
     CovidMapper covidMapper;
 
-    @GetMapping("covid")
+    @GetMapping("/covid")
     public String getConfirm(Model model){
         Collection<confirm> confirms= covidMapper.getConfirm();
         List<chart> list = new ArrayList<>();

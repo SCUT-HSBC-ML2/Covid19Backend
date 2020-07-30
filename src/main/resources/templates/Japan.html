@@ -68,7 +68,7 @@
 								</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active" href="/covid">
+								<a class="nav-link" href="/covid">
 <!--									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file">-->
 <!--										<path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>-->
 <!--										<polyline points="13 2 13 9 20 9"></polyline>-->
@@ -151,23 +151,23 @@
 				</nav>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2>Covid累计确诊病例数据</h2>
-					<div class="table-responsive">
-						<table class="table table-striped table-sm">
-<!--							<thead>-->
-<!--								<tr>-->
-<!--									<th>日期</th>-->
-<!--									<th>累计确诊</th>-->
-<!--								</tr>-->
-<!--							</thead>-->
-							<tbody>
-							<tr th:each="confirm:${confirms}">
-								<td th:text="${#dates.format(confirm.getObservationDate(),'yyyy-MM-dd HH:mm')}"></td>
-								<td th:text="${confirm.getCases()}"></td>
-							</tr>
-							</tbody>
-						</table>
-					</div>
+					<h2>日本累计确诊人数预测数据</h2>
+<!--					<div class="table-responsive">-->
+<!--						<table class="table table-striped table-sm">-->
+<!--&lt;!&ndash;							<thead>&ndash;&gt;-->
+<!--&lt;!&ndash;								<tr>&ndash;&gt;-->
+<!--&lt;!&ndash;									<th>日期</th>&ndash;&gt;-->
+<!--&lt;!&ndash;									<th>累计确诊</th>&ndash;&gt;-->
+<!--&lt;!&ndash;								</tr>&ndash;&gt;-->
+<!--&lt;!&ndash;							</thead>&ndash;&gt;-->
+<!--							<tbody>-->
+<!--							<tr th:each="confirm:${confirms}">-->
+<!--								<td th:text="${#dates.format(confirm.getObservationDate(),'yyyy-MM-dd HH:mm')}"></td>-->
+<!--								<td th:text="${confirm.getCases()}"></td>-->
+<!--							</tr>-->
+<!--							</tbody>-->
+<!--						</table>-->
+<!--					</div>-->
 
 
 					<div id="chartContainer" style="height: 470px; max-width: 1220px; margin: 0px auto;"></div>
