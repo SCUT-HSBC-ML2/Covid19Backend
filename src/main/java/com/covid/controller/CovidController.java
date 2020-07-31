@@ -12,4 +12,13 @@ public class CovidController {
     public String getcovid(Model model){
         return "redirect:/confirm/global";
     }
+//    @GetMapping("/death")
+//    public String getdeath(Model model){
+//        return "redirect:/death/global";
+//    }
+//    @GetMapping("/cure")
+//    public String getcure(Model model){
+//        return "redirect:/cure/global";
+//    }
+
 }
