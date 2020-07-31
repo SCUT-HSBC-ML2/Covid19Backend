@@ -151,24 +151,11 @@
 				</nav>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2>Covid累计确诊病例数据</h2>
-					<div class="table-responsive">
-						<table class="table table-striped table-sm">
-<!--							<thead>-->
-<!--								<tr>-->
-<!--									<th>日期</th>-->
-<!--									<th>累计确诊</th>-->
-<!--								</tr>-->
-<!--							</thead>-->
-							<tbody>
-							<tr th:each="confirm:${confirms}">
-								<td th:text="${#dates.format(confirm.getObservationDate(),'yyyy-MM-dd HH:mm')}"></td>
-								<td th:text="${confirm.getCases()}"></td>
-							</tr>
-							</tbody>
-						</table>
-					</div>
 
+					<img src="/asserts/img/newplot.png"/>
+					<img src="/asserts/img/newplot (1).png"/>
+					<img src="/asserts/img/img2 (2).png"/>
+					<img src="/asserts/img/img2 (1).png"/>
 
 					<div id="chartContainer" style="height: 470px; max-width: 1220px; margin: 0px auto;"></div>
 
