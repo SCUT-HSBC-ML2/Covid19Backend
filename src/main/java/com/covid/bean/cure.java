@@ -2,16 +2,16 @@ package com.covid.bean;
 
 import java.util.Date;
 
-public class confirm {
+public class cure {
     private Date ObservationDate;
-    private Integer Confirmed;
+    private Integer Recovered;
 
     public Date getObservationDate() {
         return ObservationDate;
     }
 
     public Integer getCases() {
-        return Confirmed;
+        return Recovered;
     }
 
     public void setObservationDate(Date observationDate) {
@@ -19,7 +19,7 @@ public class confirm {
     }
 
     public void setCases(Integer cases) {
-        this.Confirmed = cases;
+        this.Recovered = cases;
     }
 }
 

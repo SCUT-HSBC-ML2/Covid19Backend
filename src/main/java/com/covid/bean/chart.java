@@ -19,6 +19,24 @@ public class chart {
         mouth=c.get(Calendar.MONTH);
         day=c.get(Calendar.DAY_OF_MONTH);
     }
+    public chart(cure cure) {
+        y =cure.getCases();
+        Calendar c= Calendar.getInstance();
+
+        c.setTime(cure.getObservationDate());
+        year=c.get(Calendar.YEAR);
+        mouth=c.get(Calendar.MONTH);
+        day=c.get(Calendar.DAY_OF_MONTH);
+    }
+    public chart(death death) {
+        y =death.getCases();
+        Calendar c= Calendar.getInstance();
+
+        c.setTime(death.getObservationDate());
+        year=c.get(Calendar.YEAR);
+        mouth=c.get(Calendar.MONTH);
+        day=c.get(Calendar.DAY_OF_MONTH);
+    }
 
     public void setY(Integer y) {
         this.y = y;
