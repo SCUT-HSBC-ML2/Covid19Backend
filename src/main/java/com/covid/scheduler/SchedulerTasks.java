@@ -49,7 +49,7 @@ public class SchedulerTasks {
         return json.toString();
     }
 
-    @Scheduled(fixedRate = 3600000)
+    @Scheduled(cron = "0 0 * * * ? *")
     public boolean Task(){
         jdbcTemplate.execute("DROP TABLE IF EXISTS covid");
         jdbcTemplate.execute("CREATE TABLE covid(" +
