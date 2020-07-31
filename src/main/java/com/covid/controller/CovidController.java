@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 public class CovidController {
     @GetMapping("/covid")
     public String getcovid(Model model){
-        return "redirect:/confirm/global";
+        return "redirect:/map";
     }
 //    @GetMapping("/death")
 //    public String getdeath(Model model){
