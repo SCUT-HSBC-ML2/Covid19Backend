@@ -3,7 +3,6 @@ package com.covid.controller;
 import com.covid.bean.chart;
 import com.covid.bean.confirm;
 import com.covid.mapper.CovidMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,6 +13,11 @@ import java.util.*;
 
 @Controller
 public class ConfirmController {
+
+    @GetMapping("/map")
+    public String index(){
+        return "map";
+    }
     @Resource
     CovidMapper covidMapper;
 
